@@ -6,6 +6,7 @@ app.use(express.static(__dirname + '/static'));
 app.use(express.json());                                                // replaces urlencoded line      
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
+app.use(express.static(__dirname + '/public/dist/public'));
 
 // ROUTE
 require('./routes')(app);
